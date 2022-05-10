@@ -1,22 +1,29 @@
 package dolphin;
 
+import java.text.Format;
 import java.util.ArrayList;
 
 public class User {
-  Type type;
+  SystemRank type;
+  Membership rank;
   private String name;
   private int age;
   private int id;
+  private ArrayList<User> listAllUsers = new ArrayList<>();
 
-  User(String name, int age, int id, Type type) {
+  User(String name, int age, int id, SystemRank type, Membership rank) {
     setName(name);
     setAge(age);
     setId(id);
     setTypeofCustomer(type);
-
+    setRank(rank);
   }
 
   public User() {
+  }
+
+  public ArrayList<User> getListAllUsers() {
+    return listAllUsers;
   }
 
   public String getName() {
@@ -44,16 +51,29 @@ public class User {
     this.id = id;
   }
 
-  public void setTypeofCustomer(Type type) {
+  public void setTypeofCustomer(SystemRank type) {
     this.type = type;
   }
 
-  public Type getTypeOfCustomer() {
+  public SystemRank getTypeOfCustomer() {
     return type;
+  }
+
+  public Membership getMemberShip() {
+    return rank;
+  }
+
+  public void setRank(Membership rank) {
+    this.rank = rank;
   }
 
   @Override
   public String toString() {
-    return "Name: " + name + " - Age: " + age + " - ID: " + id + " - Type: " + type;
+
+    String info = "\nName: " + name + " - " + "Age: " + age + " - " + "ID: " + id + " - "
+        + "Type: " + type + " - " + "Rank: " + rank+"";
+
+    return info;
   }
 }
+

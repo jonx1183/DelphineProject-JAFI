@@ -1,15 +1,16 @@
 package dolphin;
 
 public class Controller {
+
   public static void main(String[] args) {
     Admin prg = new Admin();
-    //  User newuser = new User("joe", 33, 70, Type.MEMBER);
-    prg.createUser("jane", 33, 70, Type.MEMBER);
-    System.out.println(prg.listAllUsers.get(0));
-    System.out.println(prg.listAllUsers.get(0).getName());
-    for (int i = 0; i < prg.listAllUsers.size(); i++)
-      System.out.println(prg.listAllUsers.get(i));
-    System.out.println(prg.listAllUsers.isEmpty());
-  }
+    prg.createUser("jane", 33, 70, SystemRank.MEMBER, Membership.MEMBER);
+    prg.createUser("john", 35, 23, SystemRank.MEMBER, Membership.COMPETITOR);
+    prg.createUser("Lukas", 25, 13, SystemRank.TRAINER, Membership.ELDER);
+
+    prg.printUserList();
+    prg.writeToFile();
+    prg.getMemberShip();
+    }
 
 }

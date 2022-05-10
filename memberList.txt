@@ -1,0 +1,4 @@
+
+Name: jane - Age: 33 - ID: 70 - Type: MEMBER - Rank: MEMBER
+Name: john - Age: 35 - ID: 23 - Type: MEMBER - Rank: COMPETITOR
+Name: Lukas - Age: 25 - ID: 13 - Type: TRAINER - Rank: ELDER
