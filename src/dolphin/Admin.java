@@ -1,4 +1,8 @@
 package dolphin;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Objects;
@@ -9,6 +13,23 @@ import java.util.Objects;
 
     Admin() {
       super();
+    }
+
+    public void writeToFile() {
+      File path = new File("memberList.txt");
+      try {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(path));
+        if (!path.exists()) {
+          path.createNewFile();
+        }
+        if (it.hasNext()) {
+          bw.write(listAllUsers.toString());
+        }
+        bw.flush();
+        bw.close();
+      } catch (IOException IO) {
+        IO.getStackTrace();
+      }
     }
 
     public void createUser(String name, int age, int id, Type type) {
