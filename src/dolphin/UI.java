@@ -22,9 +22,11 @@ public class UI {
         break;
 
       case "Admin", "Foreman":
+        foreman();
         break;
 
       case "Coach":
+        coach();
         break;
 
         case "User":
@@ -37,8 +39,6 @@ public class UI {
       default:
         //code
     }
-
-
   }
 
   public void cashier(){
@@ -60,6 +60,29 @@ public class UI {
         //placeholder
         break;
 
+    }
+  }
+  public void foreman(){
+    System.out.println("What do you want to do?");
+
+    switch (userInput){
+      case "Administrate members":
+        //placeholder
+        break;
+      case "Administrate swimming records":
+        //placeholder
+        break;
+    }
+  }
+  public void coach(){
+    System.out.println("What do you want to do?");
+    switch (userInput){
+      case "Administrate tournament teams":
+        //placeholder
+        break;
+      case "Administrate members performance":
+        //placeholder
+        break;
     }
   }
 }
