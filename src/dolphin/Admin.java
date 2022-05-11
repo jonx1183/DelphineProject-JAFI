@@ -1,9 +1,6 @@
 package dolphin;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Objects;
@@ -33,6 +30,23 @@ public class Admin extends User {
       IO.getStackTrace();
     }
   }
+  public void readFromFile(){
+    File path = new File("memberList.txt");
+    try {
+      BufferedReader br = new BufferedReader(new FileReader(path));
+      if (!path.exists()) {
+        System.out.println("file doesnt exist!");
+      }
+      if (it.hasNext()) {
+       // for (int i = 0; i<getListAllUsers().size(); i++)
+        //  br.read(path);
+      }
+      br.close();
+    } catch (IOException IO) {
+      IO.getStackTrace();
+    }
+  }
+
 
   public void createUser(String name, int age, int id, SystemRank type, Membership rank) {
     User newUser = new User(name, age, id, type, rank);
@@ -65,5 +79,5 @@ public class Admin extends User {
     System.out.println("the new userdata: );
   }*/
 
-  }
+
 
