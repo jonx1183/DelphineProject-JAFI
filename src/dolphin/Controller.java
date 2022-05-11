@@ -10,7 +10,6 @@ public class Controller {
 
     prg.printUserList();
     prg.writeToFile();
-    prg.getMemberShip();
     }
 
 }
