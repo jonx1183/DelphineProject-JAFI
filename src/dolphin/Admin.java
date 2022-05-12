@@ -7,14 +7,16 @@ import java.util.Objects;
 
 public class Admin extends User {
 
- //
- // ArrayList<User> listAllUsers = new ArrayList<>();  // FLYTTET til USER class
-  Iterator<User> it = getListAllUsers().iterator();
+
+  ArrayList<User> listAllUsers = new ArrayList<>();
+  Iterator<User> it = listAllUsers.iterator();
 
   Admin() {
     super();
   }
-
+  public ArrayList<User> getListAllUsers() {
+    return listAllUsers;
+  }
   public void writeToFile() {
     File path = new File("memberList.txt");
     try {
@@ -23,8 +25,8 @@ public class Admin extends User {
         path.createNewFile();
       }
      if (it.hasNext()) {
-       } for (int i = 0; i<getListAllUsers().size(); i++){
-        bw.write(getListAllUsers().get(i).toString());}
+       } for (int i = 0; i<listAllUsers.size(); i++){
+        bw.write(listAllUsers.get(i).toString());}
      bw.flush();
       bw.close();
     } catch (IOException IO) {
@@ -56,20 +58,27 @@ public class Admin extends User {
 
   public void createUser(String name, int age, int id, SystemRank type, Membership rank) {
     User newUser = new User(name, age, id, type, rank);
-  getListAllUsers().add(newUser);
+  listAllUsers.add(newUser);
   }
 
   public void printUserList() {
-    System.out.println(getListAllUsers().toString().trim()
+    System.out.println(listAllUsers.toString().trim()
         .replace("[", "")
         .replace("]","")
        .replace(",", ""));
     }
+  //  public void printCompetitionList(){
+   //   if (it.next().getMemberShip()) {
+   //     System.out.println(listAllUsers.toString());
+   //           }
+    //  else
+   //     System.out.println("competitors not found!");
+  //  }
 
   public void deleteUser(String searchName) {
-   for (int i = 0; i < getListAllUsers().size(); i++) {
-      if (Objects.equals(getListAllUsers().get(i), searchName)) {
-        getListAllUsers().remove(i);
+   for (int i = 0; i < listAllUsers.size(); i++) {
+      if (Objects.equals(listAllUsers.get(i), searchName)) {
+        listAllUsers.remove(i);
         System.out.println(searchName + ", is removed from the list.");
       } else
           System.out.println("a match has not been found.");

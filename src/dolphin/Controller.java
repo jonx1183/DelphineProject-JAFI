@@ -21,7 +21,8 @@ public class Controller {
     //prg.printUserList();
   //prg.readFromFile();
     //prg.writeToFile();
-    competition.findingMembers();
+    //competition.findingMembers();
+    prg.printCompetitionList();
     }
 
 }

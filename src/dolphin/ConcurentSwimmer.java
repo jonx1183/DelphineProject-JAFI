@@ -7,23 +7,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ConcurentSwimmer extends User {
-  Iterator<User> it = getListAllUsers().iterator();
-  User user = new User();
-  Admin admin = new Admin();
-  Controller control = new Controller();
-  ArrayList<User> listAllUsers = new ArrayList<>();
+public class ConcurentSwimmer extends Admin {
+  //Iterator<User> it = listAllUsers.iterator();
+//  User user = new User();
+ ArrayList<User> listAllUsers = new Admin().getListAllUsers();
+ Admin admin = new Admin();
+ // Controller control = new Controller();
+
 
   public void findingMembers() {
     for (int i = 0; i < getListAllUsers().size(); i++ ) {
-      System.out.println(getListAllUsers().get(i).toString());
+      System.out.println(admin.listAllUsers.get(i).toString());
+      admin.listAllUsers.get(i).toString();
+      System.out.println(listAllUsers.get(i).toString());
+      System.out.println("hi");
     }
     System.out.println("yooo");
-   getListAllUsers().toString();
-   getListAllUsers().isEmpty();
-    System.out.println(getListAllUsers().toString());
+    System.out.println(admin.listAllUsers.isEmpty());
+    System.out.println("yooooo");
+    System.out.println(listAllUsers.toString());
 
-    System.out.println(getListAllUsers().toString().trim());
+    System.out.println(listAllUsers.toString().trim());
+    listAllUsers.toString();
+
+
   }
 }
     // If member is "COMPETITOR", add read from list. (Maybe add to new list.)
