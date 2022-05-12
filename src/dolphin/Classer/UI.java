@@ -1,4 +1,4 @@
-package dolphin;
+package dolphin.Classer;
 
 import java.util.Scanner;
 
