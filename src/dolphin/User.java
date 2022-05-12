@@ -9,7 +9,7 @@ public class User {
   private String name;
   private int age;
   private int id;
-  private ArrayList<User> listAllUsers = new ArrayList<>();
+  ArrayList<User> listAllUsers = new ArrayList<>();
 
   User(String name, int age, int id, SystemRank type, Membership rank) {
     setName(name);
@@ -23,8 +23,7 @@ public class User {
   }
 
   public ArrayList<User> getListAllUsers() {
-    return listAllUsers;
-  }
+    return listAllUsers; }
 
   public String getName() {
     return name;

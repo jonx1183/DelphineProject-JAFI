@@ -20,11 +20,11 @@ public class ConcurentSwimmer extends User {
     }
     System.out.println("yooo");
    getListAllUsers().toString();
+   getListAllUsers().isEmpty();
+    System.out.println(getListAllUsers().toString());
 
     System.out.println(getListAllUsers().toString().trim());
-
   }
-
 }
     // If member is "COMPETITOR", add read from list. (Maybe add to new list.)
 
