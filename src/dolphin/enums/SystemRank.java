@@ -1,7 +1,9 @@
-package dolphin;
+package dolphin.enums;
 
 public enum SystemRank {
   ADMIN,
   MEMBER,
-  TRAINER;
+  TRAINER,
+  CASHERE
+
 }

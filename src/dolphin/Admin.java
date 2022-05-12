@@ -1,12 +1,17 @@
 package dolphin;
 
+import dolphin.enums.AgeType;
+import dolphin.enums.MembershipLevel;
+import dolphin.enums.SystemRank;
+import dolphin.enums.SwimmingStyle;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Objects;
 
 public class Admin extends User {
- // ArrayList<User> listAllUsers = new ArrayList<>();
+  ArrayList<User> listAllUsers = new ArrayList<>();
   Iterator<User> it = getListAllUsers().iterator();
 
   Admin() {
@@ -47,8 +52,10 @@ public class Admin extends User {
   }
 
 
-  public void createUser(String name, int age, int id, SystemRank type, Membership rank) {
-    User newUser = new User(name, age, id, type, rank);
+  public void createUser(String name, int age, int id, SystemRank type, AgeType rank, MembershipLevel level,
+    SwimmingStyle style ) {
+    User newUser = new User(name, age, id, type, rank, level,style);
+     listAllUsers.add(newUser);
     getListAllUsers().add(newUser);
   }
 

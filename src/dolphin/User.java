@@ -1,22 +1,31 @@
 package dolphin;
 
-import java.text.Format;
+import dolphin.enums.AgeType;
+import dolphin.enums.MembershipLevel;
+import dolphin.enums.SwimmingStyle;
+import dolphin.enums.SystemRank;
+
 import java.util.ArrayList;
 
 public class User {
   SystemRank type;
-  Membership rank;
+  AgeType rank;
+  SwimmingStyle style;
+  MembershipLevel level;
   private String name;
   private int age;
   private int id;
   private ArrayList<User> listAllUsers = new ArrayList<>();
 
-  User(String name, int age, int id, SystemRank type, Membership rank) {
+  User(String name, int age, int id, SystemRank type, AgeType rank, MembershipLevel _level, SwimmingStyle _style) {
     setName(name);
     setAge(age);
     setId(id);
     setTypeofCustomer(type);
     setRank(rank);
+    setSwimStyle(_style);
+    setMemberLevel(_level);
+
   }
 
   public User() {
@@ -59,12 +68,25 @@ public class User {
     return type;
   }
 
-  public Membership getMemberShip() {
+  public AgeType getMemberShip() {
     return rank;
   }
 
-  public void setRank(Membership rank) {
+  public void setRank(AgeType rank) {
     this.rank = rank;
+  }
+
+  public void setMemberLevel(MembershipLevel level) {
+
+    this.level = level;
+  }
+  public void setSwimStyle(SwimmingStyle style) {
+    if(this.level == MembershipLevel.Competitor){
+      this.style = style;
+    }else {
+      this.style = SwimmingStyle.none;
+    }
+
   }
 
   @Override
