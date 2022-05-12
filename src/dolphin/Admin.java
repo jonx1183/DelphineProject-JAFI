@@ -37,9 +37,8 @@ public class Admin extends User {
       if (!path.exists()) {
         System.out.println("file doesnt exist!");
       }
-      if (it.hasNext()) {
-       // for (int i = 0; i<getListAllUsers().size(); i++)
-        //  br.read(path);
+      while (br.ready()) {
+        System.out.println(br.readLine());
       }
       br.close();
     } catch (IOException IO) {
