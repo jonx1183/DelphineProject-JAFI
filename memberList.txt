@@ -1,4 +1,13 @@
 
 Name: jane - Age: 33 - ID: 70 - Type: MEMBER - Rank: MEMBER
 Name: john - Age: 35 - ID: 23 - Type: MEMBER - Rank: COMPETITOR
-Name: Lukas - Age: 25 - ID: 13 - Type: TRAINER - Rank: ELDER
+Name: Lukas - Age: 25 - ID: 13 - Type: TRAINER - Rank: COMPETITOR
+Name: Arne - Age: 25 - ID: 15 - Type: TRAINER - Rank: COMPETITOR
+Name: Hugo - Age: 25 - ID: 17 - Type: TRAINER - Rank: COMPETITOR
+Name: Luke - Age: 25 - ID: 10 - Type: TRAINER - Rank: COMPETITOR
+Name: Lars - Age: 25 - ID: 43 - Type: TRAINER - Rank: COMPETITOR
+Name: Philine - Age: 25 - ID: 33 - Type: TRAINER - Rank: COMPETITOR
+Name: Maria - Age: 25 - ID: 31 - Type: TRAINER - Rank: ELDER
+Name: Johan - Age: 25 - ID: 32 - Type: TRAINER - Rank: ELDER
+Name: Katrine - Age: 25 - ID: 35 - Type: TRAINER - Rank: ELDER
+Name: Mischa - Age: 25 - ID: 63 - Type: TRAINER - Rank: ELDER
