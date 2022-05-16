@@ -1,10 +1,5 @@
 package dolphin.Classer;
 
-import dolphin.enums.AgeType;
-import dolphin.enums.ActivityLevel;
-import dolphin.enums.SwimmingStyle;
-import dolphin.enums.SystemRank;
-
 public class ListOfUsers {
 
  public ListOfUsers(){

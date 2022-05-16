@@ -1,7 +1,6 @@
 package dolphin.Classer;
 
 import dolphin.Data.ListOfMembers;
-import dolphin.Data.Members;
 import dolphin.Data.OverView;
 
 import java.util.Scanner;
@@ -11,7 +10,7 @@ public class UI {
   ConcurentSwimmer competition = new ConcurentSwimmer();
   OverView members = new OverView();
   Scanner scan = new Scanner(System.in);
-  ListOfMembers memberlist = new ListOfMembers();
+  ListOfMembers memberList = new ListOfMembers();
 
 
   public void userinterface() {
@@ -58,23 +57,27 @@ public class UI {
           cashier();
         } // placeholder
         case "processe payment", "2" -> {
-          System.out.println("");
+          System.out.println("PlaceHolder");
           cashier();
         } // placeholder
         case "Show debtors", "3" -> {
-          System.out.println("");
+          System.out.println("PlaceHolder1");
           cashier();
         } // placeholder
         case "Show subscription payment pr. year", "4" -> {
-          memberlist.getBudget();
+          memberList.getBudget();
           cashier();
         }
         case "Swim results", "5" -> {
-          System.out.println("");
+          System.out.println("PlaceHolder2");
           cashier();
         } // placeholder
         case "exit", "e", "6" -> userinterface();
-        default -> System.err.println("something went wrong!");
+        default -> {
+          System.err.println("something went wrong!");
+          onGoing = false;
+
+        }
       }
     }
   }
@@ -96,20 +99,23 @@ public class UI {
           foreman();
         } // placeholder
         case "Administrate swimming records", "2" -> {
-          System.out.println("");
+          System.out.println("PlaceHolder");
           foreman();
         }
         case "records", "3" -> {
-          memberlist.showMembers();
+          memberList.showMembers();
           foreman();
         }
         case "show me the money", "4" -> {
-          memberlist.getBudget();
+          memberList.getBudget();
           foreman();
         }
         case "exit", "e", "5" -> userinterface();
-        default -> System.err.println("something went wrong!");
+        default -> {
+          System.err.println("something went wrong!");
+          onGoing = false;
 
+        }
       }
     }
   }
@@ -130,13 +136,15 @@ public class UI {
           coach();
         }
         case "Administrate members performance", "2" -> {
-          //This isnt working yet, need help, how to call enum and separate them!
-        //  memberlist.showCompetitors();
+      memberList.showCompetitors();
           coach();
         }
         case "exit", "e", "3" -> userinterface();
-        default -> System.err.println("something went wrong!");
+        default -> {
+          System.err.println("something went wrong!");
+          onGoing = false;
 
+        }
       }
     }
   }

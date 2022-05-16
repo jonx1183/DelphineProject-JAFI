@@ -24,15 +24,15 @@ public class Members {
     Temp_list.add(new User("Hu Stanley", 65));
     Temp_list.add(new User("Amity Parker", 20));
     Temp_list.add(new User("Vaughan Ray", 32));
+    Temp_list.add(new User("Kyle Broflovski", 32));
     Temp_list.add(new User("Regina Hodge", 32));
-    Temp_list.add(new User("Regina Hodge", 32));
-    Temp_list.add(new User("Vivien Lara", 58));
+    Temp_list.add(new User("Lara Croft", 58));
     Temp_list.add(new User("Vivien Lara", 58));
     Temp_list.add(new User("Beverly Foster", 63));
     Temp_list.add(new User("Arsenio Raymond", 32));
     Temp_list.add(new User("Philip Walsh", 40));
     Temp_list.add(new User("Georgia Fields", 58));
-    Temp_list.add(new User("Stacy Salinas", 50));
+    Temp_list.add(new User("Regina King", 50));
     Temp_list.add(new User("Stacy Salinas", 50));
     Temp_list.add(new User("Beverly Vaughan", 64));
     Temp_list.add(new User("Yen Howard", 55));
@@ -54,7 +54,7 @@ public class Members {
     Temp_list.add(new User("Lillith Reeves", 62));
     Temp_list.add(new User("Hiram Christian", 36));
     Temp_list.add(new User("Keegan Nichols", 62));
-    Temp_list.add(new User("Keegan Nichols", 62));
+    Temp_list.add(new User("Bardin Gorekson", 62));
     Temp_list.add(new User("Hilel Murray", 47));
     Temp_list.add(new User("Moana Daniels", 61));
     Temp_list.add(new User("Hop Edwards", 62));
@@ -63,9 +63,9 @@ public class Members {
     Temp_list.add(new User("Valentine Fowler", 58));
     Temp_list.add(new User("Lila Gray", 16));
     Temp_list.add(new User("Scarlet Maxwell", 27));
+    Temp_list.add(new User("Sienna Ferguson", 45));
     Temp_list.add(new User("Len Hines", 45));
-    Temp_list.add(new User("Len Hines", 45));
-    Temp_list.add(new User("Len Hines", 45));
+    Temp_list.add(new User("James Watts", 45));
     Temp_list.add(new User("Vaughan Aguilar", 59));
 
     return Temp_list;

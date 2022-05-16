@@ -1,7 +1,7 @@
 package dolphin.Classer;
 
-import dolphin.enums.AgeType;
-import dolphin.enums.ActivityLevel;
+import dolphin.enums.AgeCategory;
+import dolphin.enums.SubscriptionType;
 import dolphin.enums.SwimmingStyle;
 import dolphin.enums.SystemRank;
 
@@ -9,15 +9,15 @@ import java.util.ArrayList;
 
 public class User {
   SystemRank type;
-  AgeType rank;
+  AgeCategory rank;
   SwimmingStyle style;
-  ActivityLevel level;
+  SubscriptionType level;
   private String name;
   private int age;
   private int id;
   ArrayList<User> listAllUsers = new ArrayList<>();
 
-  User(String name, int age, int id, SystemRank type, AgeType rank, ActivityLevel _level, SwimmingStyle _style) {
+  User(String name, int age, int id, SystemRank type, AgeCategory rank, SubscriptionType _level, SwimmingStyle _style) {
     setName(name);
     setAge(age);
     setId(id);
@@ -67,23 +67,23 @@ public class User {
     return type;
   }
 
-  public AgeType getMemberShip() {
+  public AgeCategory getMemberShip() {
     return rank;
   }
 
-  public void setRank(AgeType rank) {
+  public void setRank(AgeCategory rank) {
     this.rank = rank;
   }
 
-  public void setMemberLevel(ActivityLevel level) {
+  public void setMemberLevel(SubscriptionType level) {
 
     this.level = level;
   }
   public void setSwimStyle(SwimmingStyle style) {
-    if(this.level == ActivityLevel.Competitor){
+    if(this.level == SubscriptionType.COMPETITOR){
       this.style = style;
     }else {
-      this.style = SwimmingStyle.none;
+      this.style = SwimmingStyle.NONE;
     }
 
   }

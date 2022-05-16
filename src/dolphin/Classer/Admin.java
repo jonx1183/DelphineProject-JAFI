@@ -1,6 +1,6 @@
 package dolphin.Classer;
 
-import dolphin.enums.ActivityLevel;
+import dolphin.enums.SubscriptionType;
 import dolphin.enums.SystemRank;
 import dolphin.enums.*;
 
@@ -15,7 +15,7 @@ public class Admin extends User {
     super();
   }
 
-  public void createUser(String name, int age, int id, SystemRank type, AgeType agetype, ActivityLevel rank, SwimmingStyle style) {
+  public void createUser(String name, int age, int id, SystemRank type, AgeCategory agetype, SubscriptionType rank, SwimmingStyle style) {
     User newUser = new User(name, age, id, type, agetype,rank ,style);
   getListAllUsers().add(newUser);
   }

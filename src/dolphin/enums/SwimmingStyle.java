@@ -1,8 +1,8 @@
 package dolphin.enums;
 
 public enum SwimmingStyle {
-  none,
-  FRONTCRAWL,
+  NONE,
+  FRONT_CRAWL,
   BUTTERFLY,
   BREASTSTROKE,
   BACKSTROKE

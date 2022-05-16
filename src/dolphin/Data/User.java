@@ -1,24 +1,32 @@
 package dolphin.Data;
 
 import dolphin.Interface.IPerson;
-import dolphin.enums.ActivityForm;
-import dolphin.enums.ActivityLevel;
-import dolphin.enums.AgeType;
+import dolphin.enums.SubscriptionActivity;
+import dolphin.enums.SubscriptionType;
+import dolphin.enums.AgeCategory;
 
 public class User implements IPerson {
 
-  private  String fullName;
-  private  Integer age;
-  public AgeType _agetype;
-  public ActivityLevel _actLevel;
-  public ActivityForm _actForm;
+  public AgeCategory _agetype;
+  public SubscriptionType _subscriptionType;
+  public SubscriptionActivity _activeOrInactive;
   public Double yearlyPrice;
+  private String fullName;
+  private Integer age;
+  private Double timeInSeconds;
 
-  public User(String name, Integer age){
+  public User(String name, Integer age) {
     fullName = name;
     this.age = age;
     setAgeCategory();
   }
+  public User(String name, Integer age, Double timeInSeconds) {
+    fullName = name;
+    this.age = age;
+    this.timeInSeconds = timeInSeconds;
+    setAgeCategory();
+  }
+
   @Override
   public String getFullName() {
     return this.fullName;
@@ -30,23 +38,32 @@ public class User implements IPerson {
   }
 
 
-
-  private void setAgeCategory(){
-    if (this.age < 18){
-      this._agetype = AgeType.Junior_member;
-    }
-    else if (this.age >= 18 && this.age < 60){
-      this._agetype = AgeType.Senior_member;
-    }
-    else {
-      this._agetype = AgeType.Pensionist_member;
+  private void setAgeCategory() {
+    if (this.age < 18) {
+      this._agetype = AgeCategory.JUNIOR_MEMBER;
+    } else if (this.age >= 18 && this.age < 60) {
+      this._agetype = AgeCategory.ADULT_MEMBER;
+    } else {
+      this._agetype = AgeCategory.SENIOR_MEMBER;
     }
   }
+//public void set_subscriptionType(SubscriptionType level){
+  //  this._subscriptionType = level;
+//}
+
+
 
   @Override
   public String toString() {
-    return "Name :" + this.fullName + " | " + "Age: "+ this.age + " | " + "Age Category :"+ this._agetype + " | " +"Activity Level :"+ this._actLevel
-        + " | " +"Activity Form :" +this._actForm + " | " +"Year Price :" +this.yearlyPrice;
+    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this._agetype + " | " + "Activity Level :" + this._subscriptionType
+        + " | " + "Activity Form :" + this._activeOrInactive + " | " + "Year Price :" + this.yearlyPrice;
   }
 
+  public String toString(boolean x) {
+    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this._agetype + " | " + "Activity Level :" + this._subscriptionType
+        + " | " + "Last Time :" + this.timeInSeconds;
+
+  }
 }
+
+

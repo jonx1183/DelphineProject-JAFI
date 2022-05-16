@@ -3,23 +3,23 @@ package dolphin.Data;
 
 public class Prices {
   private Double Junior_Price  = 1000.0;
-  private Double Senior_Price = 1600.0;
-  private Double Passive_Price = 500.0;
+  private Double adult_Price = 1600.0;
+  private Double passive_Price = 500.0;
 
-  private Double pensionist_rabat = 0.25; // 25 %
-  private Double Pensionist_Price = (Senior_Price - (Senior_Price * pensionist_rabat));
+  private Double senior_Discount = 0.25; // 25 %
+  private Double senior_Price = (adult_Price - (adult_Price * senior_Discount));
 
   public Double getJunior_Price() {
     return Junior_Price;
   }
-  public Double GetSenior_Price(){
-    return Senior_Price;
+  public Double getAdult_Price(){
+    return adult_Price;
   }
-  public Double GetPassivePris(){
-    return Passive_Price;
+  public Double getPassivePrice(){
+    return passive_Price;
   }
 
-  public Double GetPensionist_Price(){
-    return Pensionist_Price;
+  public Double getSenior_Price(){
+    return senior_Price;
   }
 }
