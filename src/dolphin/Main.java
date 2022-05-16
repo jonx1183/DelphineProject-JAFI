@@ -1,16 +1,26 @@
 package dolphin;
-
-import dolphin.Data.OverView;
-import dolphin.Data.User;
-
+import dolphin.Classer.*;
+import dolphin.Data.*;
 import java.text.NumberFormat;
 
+//Main must be clean, need controller class so we can call the controller which instantiates the program,
+// whilst Main only runs controller class.
 public class Main {
 
   public static void main(String[] args) {
+    ListOfMembers membersList = new ListOfMembers();
+    UI ui = new UI();
+    ui.userinterface();
+//    membersList.showMembers();
 
+
+
+
+
+    /*
     OverView obj = new OverView();
 
+    ui.userinterface();
 
     // getting correct currency
     NumberFormat currency = NumberFormat.getCurrencyInstance();
@@ -26,8 +36,8 @@ public class Main {
     for (User item: obj.Member_List) {
       leftAlignFormat = "| %-15s   |%-5d |%-15s   |%-10s     |%-10s    |%-10s  |%n";
       System.out.print("\033[36m"); // Open print red
-      System.out.printf(leftAlignFormat, item.GetFullName(), item.GetAge(),item._agetype,item._actLevel,
-          item._actForm, currency.format(item.Årspris));
+      System.out.printf(leftAlignFormat, item.getFullName(), item.getAge(),item._agetype,item._actLevel,
+          item._actForm, currency.format(item.yearlyPrice));
       System.out.print("\033[0m"); // Close print red
       System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
     }
@@ -50,5 +60,7 @@ public class Main {
 
 
 
+  }
+*/
   }
 }

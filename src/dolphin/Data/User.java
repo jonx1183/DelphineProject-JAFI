@@ -7,35 +7,35 @@ import dolphin.enums.AgeType;
 
 public class User implements IPerson {
 
-  private  String FullName ;
-  private  Integer Age;
+  private  String fullName;
+  private  Integer age;
   public AgeType _agetype;
   public ActivityLevel _actLevel;
   public ActivityForm _actForm;
-  public Double Årspris;
+  public Double yearlyPrice;
 
   public User(String name, Integer age){
-    FullName = name;
-    Age = age;
-    SetAgeCategory();
+    fullName = name;
+    this.age = age;
+    setAgeCategory();
   }
   @Override
-  public String GetFullName() {
-    return this.FullName;
+  public String getFullName() {
+    return this.fullName;
   }
 
   @Override
-  public Integer GetAge() {
-    return this.Age;
+  public Integer getAge() {
+    return this.age;
   }
 
 
 
-  private void SetAgeCategory(){
-    if (this.Age < 18){
+  private void setAgeCategory(){
+    if (this.age < 18){
       this._agetype = AgeType.Junior_member;
     }
-    else if (this.Age >= 18 && this.Age < 60){
+    else if (this.age >= 18 && this.age < 60){
       this._agetype = AgeType.Senior_member;
     }
     else {
@@ -45,8 +45,8 @@ public class User implements IPerson {
 
   @Override
   public String toString() {
-    return "Name :" + this.FullName + " | " + "Age: "+ this.Age + " | " + "Age Category :"+ this._agetype + " | " +"Activity Level :"+ this._actLevel
-        + " | " +"Activity Form :" +this._actForm + " | " +"Year Price :" +this.Årspris;
+    return "Name :" + this.fullName + " | " + "Age: "+ this.age + " | " + "Age Category :"+ this._agetype + " | " +"Activity Level :"+ this._actLevel
+        + " | " +"Activity Form :" +this._actForm + " | " +"Year Price :" +this.yearlyPrice;
   }
 
 }

@@ -78,17 +78,17 @@ public class OverView {
        */
 
       if (item._agetype == AgeType.Junior_member){
-        item.Årspris = yearPrice.getJunior_Price();
+        item.yearlyPrice = yearPrice.getJunior_Price();
       }
       else if (item._agetype == AgeType.Senior_member){
-        item.Årspris = yearPrice.GetSenior_Price();
+        item.yearlyPrice = yearPrice.GetSenior_Price();
       }
       else if (item._agetype == AgeType.Pensionist_member &&
           (item._actForm == ActivityForm.passive)){
-        item.Årspris = yearPrice.GetPassivePris();
+        item.yearlyPrice = yearPrice.GetPassivePris();
       }
       else {
-        item.Årspris = yearPrice.GetPensionist_Price();
+        item.yearlyPrice = yearPrice.GetPensionist_Price();
       }
     }
   }
@@ -99,8 +99,9 @@ public class OverView {
     for (User item: Member_List
          ) {
       // adding yearly price per member
-      amount += item.Årspris;
+      amount += item.yearlyPrice;
     }
     return amount;
   }
+
 }

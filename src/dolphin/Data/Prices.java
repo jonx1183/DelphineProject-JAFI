@@ -6,7 +6,7 @@ public class Prices {
   private Double Senior_Price = 1600.0;
   private Double Passive_Price = 500.0;
 
-  private   Double pensionist_rabat = 0.25; // 25 %
+  private Double pensionist_rabat = 0.25; // 25 %
   private Double Pensionist_Price = (Senior_Price - (Senior_Price * pensionist_rabat));
 
   public Double getJunior_Price() {

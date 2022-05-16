@@ -4,6 +4,6 @@ public enum SystemRank {
   ADMIN,
   MEMBER,
   TRAINER,
-  CASHERE
+  CASHIER
 
 }
