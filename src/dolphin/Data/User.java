@@ -13,14 +13,14 @@ public class User implements IPerson {
   private Double yearlyPrice;
   private String fullName;
   private Integer age;
-  private Double timeInSeconds;
+  private Integer timeInSeconds;
 
   public User(String name, Integer age) {
     fullName = name;
     this.age = age;
     setAgeCategory();
   }
-  public User(String name, Integer age, Double timeInSeconds) {
+  public User(String name, Integer age, Integer timeInSeconds) {
     fullName = name;
     this.age = age;
     this.timeInSeconds = timeInSeconds;
@@ -87,8 +87,10 @@ public class User implements IPerson {
 
   @Override
   public String toString() {
-    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this._agetype + " | " + "Activity Level :" + this._subscriptionType
-        + " | " + "Activity Form :" + this._activeOrInactive + " | " + "Year Price :" + this.yearlyPrice;
+    String fullinfo = "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this._agetype + " | " + "Activity Level :" + this._subscriptionType
+        + " | " + "Activity Form :" + this._activeOrInactive + " | " + "Year Price :" + this.yearlyPrice + "\n";
+
+    return fullinfo;
   }
 
   public String toString(boolean x) {
