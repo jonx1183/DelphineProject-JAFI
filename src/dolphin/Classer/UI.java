@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class UI {
   boolean onGoing = true;
-  ConcurentSwimmer competition = new ConcurentSwimmer();
+  //ConcurentSwimmer competition = new ConcurentSwimmer();
   OverView members = new OverView();
   Scanner scan = new Scanner(System.in);
   ListOfMembers memberList = new ListOfMembers();

@@ -6,7 +6,7 @@ import dolphin.enums.*;
 
 import java.util.ArrayList;
 
-public class Admin extends User {
+/*public class Admin extends User {
 
  ArrayList<User> listAllUsers = new ArrayList<>();
 
@@ -26,5 +26,5 @@ public class Admin extends User {
 }
 
 
-
+*/
 

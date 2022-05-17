@@ -7,7 +7,7 @@ import dolphin.enums.SystemRank;
 
 import java.util.ArrayList;
 
-public class User {
+/*public class User {
   SystemRank type;
   AgeCategory rank;
   SwimmingStyle style;
@@ -97,4 +97,4 @@ public class User {
     return info;
   }
 }
-
+*/

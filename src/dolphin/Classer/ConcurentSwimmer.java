@@ -1,9 +1,9 @@
 
 package dolphin.Classer;
 
-public class ConcurentSwimmer extends Admin {
+//public class ConcurentSwimmer extends Admin {
 
 
 
-}
+
 

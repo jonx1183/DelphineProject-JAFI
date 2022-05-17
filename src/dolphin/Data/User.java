@@ -32,6 +32,38 @@ public class User implements IPerson {
     return this.fullName;
   }
 
+  public AgeCategory get_agetype() {
+    return _agetype;
+  }
+
+  public void set_agetype(AgeCategory _agetype) {
+    this._agetype = _agetype;
+  }
+
+  public SubscriptionType getSubscriptionType(){
+    return this._subscriptionType;
+  }
+
+  public void set_subscriptionType(SubscriptionType _subscriptionType) {
+    this._subscriptionType = _subscriptionType;
+  }
+
+  public SubscriptionActivity get_activeOrInactive() {
+    return _activeOrInactive;
+  }
+
+  public void set_activeOrInactive(SubscriptionActivity _activeOrInactive) {
+    this._activeOrInactive = _activeOrInactive;
+  }
+
+  public Double getYearlyPrice() {
+    return yearlyPrice;
+  }
+
+  public void setYearlyPrice(Double yearlyPrice) {
+    this.yearlyPrice = yearlyPrice;
+  }
+
   @Override
   public Integer getAge() {
     return this.age;
