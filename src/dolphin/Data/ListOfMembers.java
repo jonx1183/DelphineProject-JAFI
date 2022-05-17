@@ -22,8 +22,8 @@ public class ListOfMembers {
     for (User item : obj.member_List) {
       leftAlignFormat = "| %-15s   |%-5d |%-15s   |%-10s     |%-10s    |%-10s  |%n";
       System.out.print("\033[36m"); // Open print red
-      System.out.printf(leftAlignFormat, item.getFullName(), item.getAge(), item._agetype, item._subscriptionType,
-          item._activeOrInactive, currency.format(item.yearlyPrice));
+      System.out.printf(leftAlignFormat, item.getFullName(), item.getAge(), item.get_agetype(), item.getSubscriptionType(),
+          item.get_activeOrInactive(), currency.format(item.getYearlyPrice()));
       System.out.print("\033[0m"); // Close print red
       System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
     }
@@ -37,11 +37,11 @@ public class ListOfMembers {
     System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
 
     for (User item: obj.member_List){
-      if (item._subscriptionType == SubscriptionType.COMPETITOR)
-        leftAlignFormat = "| %-15s   |%-5d |%-15s   |%-10s     |%-10s    |%-10s  |%n";
+      if (item.getSubscriptionType() == SubscriptionType.COMPETITOR)
+        leftAlignFormat = "| %-20s   |%-5d |%-25d   |%-10d     |%-10s    |%-10s  |%n";
       System.out.print("\033[36m"); // Open print redz
-      System.out.printf(leftAlignFormat, item.getFullName(), item.getAge(), item._subscriptionType,
-          item._activeOrInactive, currency.format(item.yearlyPrice));
+      System.out.printf(leftAlignFormat, item.getFullName(), item.getAge(), item.get_agetype(), item.getSubscriptionType(),
+          item.get_activeOrInactive(), currency.format(item.getYearlyPrice()));
       System.out.print("\033[0m"); // Close print red
       System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
     }

@@ -24,14 +24,15 @@ public class OverView {
     setYearlyPrices();
     setTimeInSeconds();
   }
+
   // FUCK HOW TO FIX THIS >_<
   public void setTimeInSeconds() {
     for (User item : member_List) {
-      if (item._subscriptionType == SubscriptionType.COMPETITOR) {
+      //if (item._subscriptionType == SubscriptionType.COMPETITOR) {
 
-      }
     }
   }
+
 
   // setting the activity level of each member from the dashboard
   private void setSubscriptionType() {
@@ -48,7 +49,7 @@ public class OverView {
       // tjek for even number
       if (index % 2 == 0) {
         // set each that satisfies the condition as competitor
-        item._subscriptionType = SubscriptionType.COMPETITOR;
+        item.set_subscriptionType(SubscriptionType.COMPETITOR);
 
       } else {
         // set as motionist
@@ -60,15 +61,15 @@ public class OverView {
   private void setSubscriptionActivity() {
     for (User item : member_List) {
       // making all competitors as active members
-      if (item._subscriptionType == SubscriptionType.COMPETITOR) {
-        item._activeOrInactive = SubscriptionActivity.ACTIVE;
+      if (item.getSubscriptionType() == SubscriptionType.COMPETITOR) {
+        item.set_activeOrInactive(SubscriptionActivity.ACTIVE);
       }
       // making all motionist that are either junior og senior - Active
       else if (item._subscriptionType == SubscriptionType.SWIMMER &&
           (item._agetype != AgeCategory.SENIOR_MEMBER)) {
         item._activeOrInactive = SubscriptionActivity.ACTIVE;
       } else {
-        item._activeOrInactive = SubscriptionActivity.PASSIVE;
+        item.set_activeOrInactive(SubscriptionActivity.PASSIVE);
       }
     }
   }
@@ -85,15 +86,15 @@ public class OverView {
       }
        */
 
-      if (item._agetype == AgeCategory.JUNIOR_MEMBER) {
-        item.yearlyPrice = yearPrice.getJunior_Price();
-      } else if (item._agetype == AgeCategory.ADULT_MEMBER) {
-        item.yearlyPrice = yearPrice.getAdult_Price();
-      } else if (item._agetype == AgeCategory.SENIOR_MEMBER &&
-          (item._activeOrInactive == SubscriptionActivity.PASSIVE)) {
-        item.yearlyPrice = yearPrice.getPassivePrice();
+      if (item.get_agetype() == AgeCategory.JUNIOR_MEMBER) {
+        item.setYearlyPrice(yearPrice.getJunior_Price());
+      } else if (item.get_agetype() == AgeCategory.ADULT_MEMBER) {
+        item.setYearlyPrice(yearPrice.getAdult_Price());
+      } else if (item.get_agetype() == AgeCategory.SENIOR_MEMBER &&
+          (item.get_activeOrInactive() == SubscriptionActivity.PASSIVE)) {
+        item.setYearlyPrice(yearPrice.getPassivePrice());
       } else {
-        item.yearlyPrice = yearPrice.getSenior_Price();
+        item.setYearlyPrice(yearPrice.getSenior_Price());
       }
     }
   }
@@ -103,9 +104,8 @@ public class OverView {
     Double amount = 0.0;
     for (User item : member_List) {
       // adding yearly price per member
-      amount += item.yearlyPrice;
+      amount += item.getYearlyPrice();
     }
     return amount;
   }
-
 }

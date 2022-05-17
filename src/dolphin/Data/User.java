@@ -7,10 +7,10 @@ import dolphin.enums.AgeCategory;
 
 public class User implements IPerson {
 
-  public AgeCategory _agetype;
-  public SubscriptionType _subscriptionType;
-  public SubscriptionActivity _activeOrInactive;
-  public Double yearlyPrice;
+  private AgeCategory _agetype;
+  private SubscriptionType _subscriptionType;
+  private SubscriptionActivity _activeOrInactive;
+  private Double yearlyPrice;
   private String fullName;
   private Integer age;
   private Double timeInSeconds;
