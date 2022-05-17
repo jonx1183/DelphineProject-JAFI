@@ -1,5 +1,6 @@
 package dolphin.Data;
 
+import dolphin.Classer.ConcurentSwimmer;
 import dolphin.enums.SubscriptionType;
 
 import java.text.NumberFormat;
@@ -28,22 +29,28 @@ public class ListOfMembers {
       System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
     }
   }
+
+
+
+
   //This isnt working yet, need help, having trouble with the formatted string.
   public void showCompetitors(){
-    String leftAlignFormat = "| %-20s   |%-5d |%-25d   |%-10d     |%-10s    |%-10s  |%n";
-    System.out.format("|-------------------------------- List Of Dolphin Club Member ------------------------------+%n");
-    System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
-    System.out.format("| Name              |Age   |AgeCategory       |ActivityLevel  |ActivityForm  |Yearly Price  |%n");
-    System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
+    String leftAlignFormat = "| %-20s|%-5d |%-20s|%-20s|%-20s  |%n";
+    System.out.format("|---------------------- List Of Competitor Delphin Club -------------------------+%n");
+    System.out.format("+-------------------+------+------------------+-------------------+--------------+%n");
+    System.out.format("| Name              |Age   |AgeType           |ActivityLevel      |SwimmingStyle |%n");
+    System.out.format("+-------------------+------+------------------+-------------------+--------------+%n");
 
-    for (User item: obj.member_List){
-      if (item.getSubscriptionType() == SubscriptionType.COMPETITOR)
-        leftAlignFormat = "| %-20s   |%-5d |%-25d   |%-10d     |%-10s    |%-10s  |%n";
-      System.out.print("\033[36m"); // Open print redz
-      System.out.printf(leftAlignFormat, item.getFullName(), item.getAge(), item.get_agetype(), item.getSubscriptionType(),
-          item.get_activeOrInactive(), currency.format(item.getYearlyPrice()));
+    ConcurentSwimmer obj2 = new ConcurentSwimmer();
+    for (ConcurentSwimmer item: obj2.competitor_list){
+      if (item.GetUserDetail().getSubscriptionType() == SubscriptionType.COMPETITOR)
+        leftAlignFormat = "| %-20s|%-5d |%-20s|%-20s|%-20s  |%n";
+      System.out.print("\033[31m"); // Open print red
+      System.out.printf(leftAlignFormat, item.GetUserDetail().getFullName(),
+          item.GetUserDetail().getAge(), item.GetUserDetail().get_agetype(), item.GetUserDetail().getSubscriptionType(),
+          item.GetSwimmningStyle());
       System.out.print("\033[0m"); // Close print red
-      System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
+      System.out.format("+-------------------+------+------------------+-------------------+--------------+%n");
     }
       }
 
