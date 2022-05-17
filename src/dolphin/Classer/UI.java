@@ -89,7 +89,9 @@ public class UI {
         (2) - Adminstrate Swimming records
         (3) - Show info about all members:
         (4) - Show me the money:
-        (5) - exit:
+        (5) - Write Members to File:
+        (6) - Read Members from file:
+        (7) - exit:
         """);
     String userInput = scan.nextLine();
     while (onGoing) {
@@ -110,11 +112,18 @@ public class UI {
           memberList.getBudget();
           foreman();
         }
-        case "exit", "e", "5" -> userinterface();
+        case "Write to File", "5" -> {
+          memberList.writeToFile();
+          foreman();
+        }
+        case "Read from File", "6" -> {
+          memberList.readFromFile();
+          foreman();
+        }
+        case "exit", "e", "7" -> userinterface();
         default -> {
           System.err.println("something went wrong!");
           onGoing = false;
-
         }
       }
     }

@@ -5,6 +5,7 @@ import dolphin.enums.SubscriptionType;
 import dolphin.enums.AgeCategory;
 
 import java.util.List;
+import java.util.Random;
 
 // THIS IS THE FRONTDESK
 // SEE THIS AS THE PORTAL FOR ADMIN/CASHIER/ ETC....
@@ -14,23 +15,27 @@ public class OverView {
   // this is form helping setting prices
   private Prices yearPrice = new Prices();
   private Members _data = new Members();
+  private Integer timeInSeconds;
 
 
-  // contructor
   public OverView() {
     member_List = _data.Lst_of_Members;
     setSubscriptionType();
     setSubscriptionActivity();
     setYearlyPrices();
-    setTimeInSeconds();
+    setTimeInSeconds(10);
   }
 
   // FUCK HOW TO FIX THIS >_<
-  public void setTimeInSeconds() {
+  public void setTimeInSeconds(Integer timeInSeconds) {
     for (User item : member_List) {
-      //if (item._subscriptionType == SubscriptionType.COMPETITOR) {
+      if (item.getSubscriptionType() == SubscriptionType.COMPETITOR)
+        this.timeInSeconds = timeInSeconds;
 
     }
+  }
+  public Integer getTimeinSeconds(){
+    return this.timeInSeconds;
   }
 
 
@@ -41,19 +46,18 @@ public class OverView {
     // and uneven number as simple motionist
     Integer index = 0;
 
-    // looping through the data/list
+
     for (User item : member_List) {
       //increment index
       index++;
 
       // tjek for even number
       if (index % 2 == 0) {
-        // set each that satisfies the condition as competitor
+
         item.set_subscriptionType(SubscriptionType.COMPETITOR);
 
       } else {
-        // set as motionist
-        item._subscriptionType = SubscriptionType.SWIMMER;
+        item.set_subscriptionType(SubscriptionType.SWIMMER);
       }
     }
   }
@@ -65,16 +69,16 @@ public class OverView {
         item.set_activeOrInactive(SubscriptionActivity.ACTIVE);
       }
       // making all motionist that are either junior og senior - Active
-      else if (item._subscriptionType == SubscriptionType.SWIMMER &&
-          (item._agetype != AgeCategory.SENIOR_MEMBER)) {
-        item._activeOrInactive = SubscriptionActivity.ACTIVE;
+      else if (item.getSubscriptionType() == SubscriptionType.SWIMMER &&
+          (item.get_agetype() != AgeCategory.SENIOR_MEMBER)) {
+        item.set_activeOrInactive(SubscriptionActivity.ACTIVE);
       } else {
         item.set_activeOrInactive(SubscriptionActivity.PASSIVE);
       }
     }
   }
 
-  // getting prices per member by Age category
+  // Price for member - Age category
   private void setYearlyPrices() {
     for (User item : member_List) {
       // case by age category
@@ -99,11 +103,9 @@ public class OverView {
     }
   }
 
-  // summing total budget
   public Double getYearlyBudget() {
     Double amount = 0.0;
     for (User item : member_List) {
-      // adding yearly price per member
       amount += item.getYearlyPrice();
     }
     return amount;
