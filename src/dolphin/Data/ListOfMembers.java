@@ -17,13 +17,13 @@ public class ListOfMembers {
 
     String leftAlignFormat = "| %-20s   |%-5d |%-25d   |%-10d     |%-10s    |%-10s  |%n";
 
-    System.out.format("|-------------------------------- List Of Dolphin Club Member ------------------------------+%n");
+    System.out.format("+-------------------------------- List Of Dolphin Club Member ------------------------------+%n");
     System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
     System.out.format("| Name              |Age   |AgeCategory       |ActivityLevel  |ActivityForm  |Yearly Price  |%n");
     System.out.format("+-------------------+------+------------------+---------------+--------------+--------------+%n");
 
     for (User item : obj.member_List) {
-      leftAlignFormat = "| %-15s   |%-5d |%-15s   |%-10s     |%-10s    |%-10s  |%n";
+      leftAlignFormat = "| %-18s|%-6d|%-18s|%-15s|%-14s|%-14s|%n";
       System.out.print("\033[36m"); // Open print red
       System.out.printf(leftAlignFormat, item.getFullName(), item.getAge(), item.get_agetype(), item.getSubscriptionType(),
           item.get_activeOrInactive(), currency.format(item.getYearlyPrice()));

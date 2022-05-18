@@ -23,17 +23,9 @@ public class OverView {
     setSubscriptionType();
     setSubscriptionActivity();
     setYearlyPrices();
-    setTimeInSeconds(10);
   }
 
-  // FUCK HOW TO FIX THIS >_<
-  public void setTimeInSeconds(Integer timeInSeconds) {
-    for (User item : member_List) {
-      if (item.getSubscriptionType() == SubscriptionType.COMPETITOR)
-        this.timeInSeconds = timeInSeconds;
 
-    }
-  }
   public Integer getTimeinSeconds(){
     return this.timeInSeconds;
   }
