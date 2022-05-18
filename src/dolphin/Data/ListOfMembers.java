@@ -1,6 +1,6 @@
 package dolphin.Data;
 
-import dolphin.Classer.ConcurentSwimmer;
+import dolphin.Classer.Competition;
 import dolphin.enums.SubscriptionType;
 
 import java.text.NumberFormat;
@@ -41,8 +41,8 @@ public class ListOfMembers {
     System.out.format("| Name              |Age   |AgeType           |ActivityLevel      |SwimmingStyle |%n");
     System.out.format("+-------------------+------+------------------+-------------------+--------------+%n");
 
-    ConcurentSwimmer obj2 = new ConcurentSwimmer();
-    for (ConcurentSwimmer item: obj2.competitor_list){
+    Competition obj2 = new Competition();
+    for (Competition item: obj2.competitor_list){
       if (item.GetUserDetail().getSubscriptionType() == SubscriptionType.COMPETITOR)
         leftAlignFormat = "| %-20s|%-5d |%-20s|%-20s|%-20s  |%n";
       System.out.print("\033[31m"); // Open print red
@@ -50,7 +50,7 @@ public class ListOfMembers {
           item.GetUserDetail().getAge(), item.GetUserDetail().get_agetype(), item.GetUserDetail().getSubscriptionType(),
           item.GetSwimmningStyle());
       System.out.print("\033[0m"); // Close print red
-      System.out.format("+-------------------+------+------------------+-------------------+--------------+%n");
+      System.out.format("+-------------------+------+------------------+-------------------+-----------+-----------+%n");
     }
       }
 

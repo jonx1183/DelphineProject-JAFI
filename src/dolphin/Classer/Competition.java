@@ -6,41 +6,47 @@ import dolphin.Data.User;
 import dolphin.enums.SubscriptionType;
 import dolphin.enums.SwimmingStyle;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
-public class ConcurentSwimmer {
+public class Competition {
+  private String timeInSecs;
 
   // use to get the full list of memmber from overview
   private OverView list_Parser;
-  public List<ConcurentSwimmer> competitor_list;
+  public List<Competition> competitor_list;
   // import a user and the style
   private User User;
   private SwimmingStyle SwimmingStyle;
 
   // overloading the constructor ,so that we can call this call without having to give parameters
-  public ConcurentSwimmer(){
+  public Competition() {
     list_Parser = new OverView();
     competitor_list = GetCompList();
   }
-  public ConcurentSwimmer(User _user, SwimmingStyle _style){
+
+  public Competition(User _user, SwimmingStyle _style, String timeInSecs) {
     this.SwimmingStyle = _style;
     this.User = _user;
 
   }
 
   // getting list of comp.. from existing list from overview e.g "list_Parser"
-  private List<ConcurentSwimmer> GetCompList(){
+  private List<Competition> GetCompList() {
     List<User> full_memberList = list_Parser.member_List;
 
     // temparate list
-    List<ConcurentSwimmer> temp_list = new ArrayList<>();
+    List<Competition> temp_list = new ArrayList<>();
 
 
-    for (User person: full_memberList) {
-      if (person.getSubscriptionType() == SubscriptionType.COMPETITOR){
-        ConcurentSwimmer temp_obj = new ConcurentSwimmer(person,RandomizeStyle());
+    for (User person : full_memberList) {
+      if (person.getSubscriptionType() == SubscriptionType.COMPETITOR) {
+        Competition temp_obj = new Competition(person, RandomizeStyle(), randomizeTimes2());
         temp_list.add(temp_obj);
       }
     }
