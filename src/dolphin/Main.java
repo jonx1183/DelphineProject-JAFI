@@ -8,7 +8,6 @@ import java.text.NumberFormat;
 public class Main {
 
   public static void main(String[] args) {
-    ListOfMembers membersList = new ListOfMembers();
     UI ui = new UI();
     ui.userinterface();
 //    membersList.showMembers();

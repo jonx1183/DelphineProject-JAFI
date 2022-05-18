@@ -36,7 +36,6 @@ public class UI {
       }
       default -> System.out.println("something went wrong!");
     }
-    //code
   }
 
   public void cashier() {
@@ -53,10 +52,10 @@ public class UI {
     while (onGoing) {
       switch (userInput) {
         case "Show payment options for members", "1" -> {
-          System.out.println("");
+          System.out.println("< 18 year = pay 1200, ");
           cashier();
         } // placeholder
-        case "processe payment", "2" -> {
+        case "Process payment", "2" -> {
           System.out.println("PlaceHolder");
           cashier();
         } // placeholder
@@ -76,7 +75,6 @@ public class UI {
         default -> {
           System.err.println("something went wrong!");
           onGoing = false;
-
         }
       }
     }
@@ -85,12 +83,12 @@ public class UI {
   public void foreman() {
     System.out.println("What do you want to do?");
     System.out.println("""
-        (1) - Adminstrate Members: 
+        (1) - Adminstrate Members:
         (2) - Adminstrate Swimming records
         (3) - Show info about all members:
-        (4) - Show me the money:
+        (4) - Show me the Money:
         (5) - Write Members to File:
-        (6) - Read Members from file:
+        (6) - Read Members from File:
         (7) - exit:
         """);
     String userInput = scan.nextLine();
@@ -130,7 +128,6 @@ public class UI {
   }
 
   public void coach() {
-
     System.out.println("What do you want to do?");
     System.out.println("""
         (1) - Administrate tournament teams:
@@ -145,7 +142,7 @@ public class UI {
           coach();
         }
         case "Administrate members performance", "2" -> {
-      memberList.showCompetitors();
+        memberList.showCompetitors();
           coach();
         }
         case "exit", "e", "3" -> userinterface();
