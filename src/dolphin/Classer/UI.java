@@ -11,6 +11,7 @@ public class UI {
   OverView members = new OverView();
   Scanner scan = new Scanner(System.in);
   ListOfMembers memberList = new ListOfMembers();
+  UserPerfomance record_by_competitor = new UserPerfomance();
 
 
   public void userinterface() {
@@ -29,7 +30,7 @@ public class UI {
       case "User", "1" -> System.out.println("test2");
       case "cashier", "2" -> cashier();
       case "Coach", "3" -> coach();
-      case "competition", "4" -> System.out.println("placeholder");
+      case "competition", "4" -> record_by_competitor.Top5_Printer(); //System.out.println("placeholder");
       case "Admin", "Foreman", "5" -> foreman();
       case "exit", "e", "6" -> {
         System.exit(0);

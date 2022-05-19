@@ -20,12 +20,6 @@ public class User implements IPerson {
     this.age = age;
     setAgeCategory();
   }
-  public User(String name, Integer age, Integer timeInSeconds) {
-    fullName = name;
-    this.age = age;
-    this.timeInSeconds = timeInSeconds;
-    setAgeCategory();
-  }
 
   @Override
   public String getFullName() {

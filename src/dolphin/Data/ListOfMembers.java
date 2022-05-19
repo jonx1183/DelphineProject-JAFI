@@ -44,12 +44,14 @@ public class ListOfMembers {
     for (Competition item: obj2.competitor_list){
       if (item.GetUserDetail().getSubscriptionType() == SubscriptionType.COMPETITOR)
         leftAlignFormat = "| %-18s|%-5d |%-18s|%-19s|%-23s|%-17s|%n";
-      System.out.print("\033[31m"); // Open print red
+      System.out.print("\033[35m"); // Open print VIOLET
       System.out.printf(leftAlignFormat, item.GetUserDetail().getFullName(),
           item.GetUserDetail().getAge(), item.GetUserDetail().get_agetype(), item.GetUserDetail().getSubscriptionType(),
-          item.GetSwimmningStyle(), item.getTimeInSecs());
-      System.out.print("\033[0m"); // Close print red
+          item.GetSwimmningStyle(), item.GetRandomTime());
+      System.out.print("\033[0m"); // Close print violet
       System.out.format("+-------------------+------+------------------+-------------------+-----------------------+-----------------+%n");
+      // testing
+      //System.out.println(item.GetRandomMinutes() + item.GetRandomSeconds());
     }
   }
 
@@ -106,7 +108,7 @@ public class ListOfMembers {
       IO.getStackTrace();
     }
     finally {
-      System.out.println("Chek if file has been written Correctly");
+      System.out.println("Check if file has been written Correctly");
     }
   }
 }
