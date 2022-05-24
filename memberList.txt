@@ -1,110 +1,55 @@
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Malik Delacruz | Age: 38 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Chadwick Osborne | Age: 18 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Alea Aguilar | Age: 42 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Calista Conley | Age: 13 | Age Category :JUNIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1000.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Kay Rutledge | Age: 15 | Age Category :JUNIOR_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1000.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Geraldine Oneil | Age: 66 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Colleen Le | Age: 52 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Josephine Dudley | Age: 60 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Rinah Lindsay | Age: 51 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Hu Stanley | Age: 65 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Amity Parker | Age: 20 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Vaughan Ray | Age: 32 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Kyle Broflovski | Age: 32 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Regina Hodge | Age: 32 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Lara Croft | Age: 58 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Vivien Lara | Age: 58 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Beverly Foster | Age: 63 | Age Category :SENIOR_MEMBER | Activity Level :SWIMMER | Activity Form :PASSIVE | Year Price :500.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Arsenio Raymond | Age: 32 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Philip Walsh | Age: 40 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Georgia Fields | Age: 58 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Regina King | Age: 50 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Stacy Salinas | Age: 50 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Beverly Vaughan | Age: 64 | Age Category :SENIOR_MEMBER | Activity Level :SWIMMER | Activity Form :PASSIVE | Year Price :500.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Yen Howard | Age: 55 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Donovan Patterson | Age: 29 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Destiny Montgomery | Age: 39 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Benjamin Hopper | Age: 23 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :May Bolton | Age: 16 | Age Category :JUNIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1000.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Hakeem Duffy | Age: 53 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Lavinia Haynes | Age: 43 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Hayfa Moreno | Age: 19 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Arden Hudson | Age: 42 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Ann Henson | Age: 69 | Age Category :SENIOR_MEMBER | Activity Level :SWIMMER | Activity Form :PASSIVE | Year Price :500.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Ima Meyer | Age: 60 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Kermit Mejia | Age: 44 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Magee Holt | Age: 49 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Calvin Cardenas | Age: 21 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Riley Cline | Age: 58 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :September Wyatt | Age: 38 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Lillith Reeves | Age: 62 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Hiram Christian | Age: 36 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Keegan Nichols | Age: 62 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Bardin Gorekson | Age: 62 | Age Category :SENIOR_MEMBER | Activity Level :SWIMMER | Activity Form :PASSIVE | Year Price :500.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Hilel Murray | Age: 47 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Moana Daniels | Age: 61 | Age Category :SENIOR_MEMBER | Activity Level :SWIMMER | Activity Form :PASSIVE | Year Price :500.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Hop Edwards | Age: 62 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Lillian Greer | Age: 65 | Age Category :SENIOR_MEMBER | Activity Level :SWIMMER | Activity Form :PASSIVE | Year Price :500.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Flynn Burt | Age: 64 | Age Category :SENIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1200.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Valentine Fowler | Age: 58 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Lila Gray | Age: 16 | Age Category :JUNIOR_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1000.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Scarlet Maxwell | Age: 27 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Sienna Ferguson | Age: 45 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Len Hines | Age: 45 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :James Watts | Age: 45 | Age Category :ADULT_MEMBER | Activity Level :COMPETITOR | Activity Form :ACTIVE | Year Price :1600.0
-+-------------------+------+------------------+---------------+--------------+--------------+
 Name :Vaughan Aguilar | Age: 59 | Age Category :ADULT_MEMBER | Activity Level :SWIMMER | Activity Form :ACTIVE | Year Price :1600.0

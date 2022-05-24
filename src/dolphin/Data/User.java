@@ -7,7 +7,7 @@ import dolphin.enums.AgeCategory;
 
 public class User implements IPerson {
 
-  private AgeCategory _agetype;
+  private AgeCategory ageCategory;
   private SubscriptionType _subscriptionType;
   private SubscriptionActivity _activeOrInactive;
   private Double yearlyPrice;
@@ -26,12 +26,12 @@ public class User implements IPerson {
     return this.fullName;
   }
 
-  public AgeCategory get_agetype() {
-    return _agetype;
+  public AgeCategory getAgeCategory() {
+    return ageCategory;
   }
 
-  public void set_agetype(AgeCategory _agetype) {
-    this._agetype = _agetype;
+  public void setAgeCategory(AgeCategory ageCategory) {
+    this.ageCategory = ageCategory;
   }
 
   public SubscriptionType getSubscriptionType(){
@@ -66,11 +66,11 @@ public class User implements IPerson {
 
   private void setAgeCategory() {
     if (this.age < 18) {
-      this._agetype = AgeCategory.JUNIOR_MEMBER;
+      this.ageCategory = AgeCategory.JUNIOR_MEMBER;
     } else if (this.age >= 18 && this.age < 60) {
-      this._agetype = AgeCategory.ADULT_MEMBER;
+      this.ageCategory = AgeCategory.ADULT_MEMBER;
     } else {
-      this._agetype = AgeCategory.SENIOR_MEMBER;
+      this.ageCategory = AgeCategory.SENIOR_MEMBER;
     }
   }
 //public void set_subscriptionType(SubscriptionType level){
@@ -81,15 +81,15 @@ public class User implements IPerson {
 
   @Override
   public String toString() {
-    String fullinfo = "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this._agetype + " | " + "Activity Level :" + this._subscriptionType
+    String fullinfo = "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this.ageCategory + " | " + "Activity Level :" + this._subscriptionType
         + " | " + "Activity Form :" + this._activeOrInactive + " | " + "Year Price :" + this.yearlyPrice + "\n";
 
     return fullinfo;
   }
 
-  public String toString(boolean x) {
-    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this._agetype + " | " + "Activity Level :" + this._subscriptionType
-        + " | " + "Last Time :" + this.timeInSeconds;
+public String toString2(boolean x) {
+    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this.ageCategory + " | " + "Activity Level :" + this._subscriptionType
+        + " | " + "\n";
 
   }
 }
