@@ -1,4 +1,3 @@
-
 package dolphin.Classer;
 
 
@@ -10,34 +9,29 @@ import dolphin.enums.SwimmingStyle;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 
 public class Competition {
-  public LocalTime timeInSecs;
-
+  final Random random = new Random();
+  public LocalTime getRandomTimeRecord;
+  public List<Competition> competitor_list;
   // use to get the full list of memmber from overview
   private OverView list_Parser;
-  public List<Competition> competitor_list;
   // import a user and the style
   private User User;
   private SwimmingStyle SwimmingStyle;
-  final Random random = new Random();
 
   // overloading the constructor ,so that we can call this call without having to give parameters
   public Competition() {
     list_Parser = new OverView();
     competitor_list = GetCompList();
-
   }
 
   public Competition(User _user) {
-    this.SwimmingStyle = RandomizeStyle() ;
+    this.SwimmingStyle = RandomizeStyle();
     this.User = _user;
-    this.timeInSecs = GetRandomTime();
-
+    this.getRandomTimeRecord = GetRandomTime();
   }
-
 
   // getting list of comp.. from existing list from overview e.g "list_Parser"
   private List<Competition> GetCompList() {
@@ -56,7 +50,7 @@ public class Competition {
     return temp_list;
   }
 
-  private SwimmingStyle RandomizeStyle(){
+  private SwimmingStyle RandomizeStyle() {
     SwimmingStyle[] Values = SwimmingStyle.values();
     // length of array of swimstyles
     int len = Values.length;
@@ -65,15 +59,15 @@ public class Competition {
     return Values[randIndex];
   }
 
-  public SwimmingStyle GetSwimmningStyle(){
+  public SwimmingStyle GetSwimmningStyle() {
     return this.SwimmingStyle;
   }
 
-  public User GetUserDetail(){
+  public User  GetUserDetail() {
     return this.User;
   }
 
-  /*
+  /* THIS METHOD USES A STRING TIME.
   private String  randomizeTimes2() {
     // SimpleDateFormat sdf = new SimpleDateFormat("mm:ss.SSS");
     Integer minute = random.nextInt(0, 3);
@@ -82,7 +76,6 @@ public class Competition {
     // timeValue = "Time: " + minute.intValue() + ":" + second.intValue() + ":" + milliseconds.intValue();
     return timeValue;
   }
-
   public LocalTime getTimeInSecs() {
     return this.timeInSecs;
   }
@@ -92,15 +85,28 @@ public class Competition {
   */
 
 
-  // using the local time instead of previews method
-  public LocalTime GetRandomTime(){
-    LocalTime tmp_time = LocalTime.of(random.nextInt(0,1), random.nextInt(1,3), random.nextInt(0,59),
-        (int) random.nextDouble(0,999));
+  // USING LOCALTIME OBJECT INSTEAD OF STRING OR INT
+  public LocalTime GetRandomTime() {
+    LocalTime tmp_time = LocalTime.of(random.nextInt(0, 1), random.nextInt(1, 3), random.nextInt(0, 59),
+        (int) random.nextInt(0, 999)*1000000);
     return tmp_time;
   }
 
+  /*public void sortingRAndomTime(LocalTime random, LocalTime random2){
+    if (random < random2);
+      this.getRandomTimeRecord = random;
+*/
 
-}
+  }
+
+ /* public Integer getRandomTimeASINT(){
+        random.nextInt(0,1);
+        random.nextInt(1,3);
+        random.nextInt(0,59);
+        random.nextDouble(0,999);
+
+  return timeinInts}
+*/
 
 
 

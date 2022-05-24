@@ -49,6 +49,7 @@ public class UI {
         (5) - "Swim Results":
         (6) - exit:
         """);
+
     String userInput = scan.nextLine();
     while (onGoing) {
       switch (userInput) {

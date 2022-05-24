@@ -5,7 +5,6 @@ import dolphin.enums.SubscriptionType;
 import dolphin.enums.AgeCategory;
 
 import java.util.List;
-import java.util.Random;
 
 // THIS IS THE FRONTDESK
 // SEE THIS AS THE PORTAL FOR ADMIN/CASHIER/ ETC....
@@ -62,7 +61,7 @@ public class OverView {
       }
       // making all motionist that are either junior og senior - Active
       else if (item.getSubscriptionType() == SubscriptionType.SWIMMER &&
-          (item.get_agetype() != AgeCategory.SENIOR_MEMBER)) {
+          (item.getAgeCategory() != AgeCategory.SENIOR_MEMBER)) {
         item.set_activeOrInactive(SubscriptionActivity.ACTIVE);
       } else {
         item.set_activeOrInactive(SubscriptionActivity.PASSIVE);
@@ -82,11 +81,11 @@ public class OverView {
       }
        */
 
-      if (item.get_agetype() == AgeCategory.JUNIOR_MEMBER) {
+      if (item.getAgeCategory() == AgeCategory.JUNIOR_MEMBER) {
         item.setYearlyPrice(yearPrice.getJunior_Price());
-      } else if (item.get_agetype() == AgeCategory.ADULT_MEMBER) {
+      } else if (item.getAgeCategory() == AgeCategory.ADULT_MEMBER) {
         item.setYearlyPrice(yearPrice.getAdult_Price());
-      } else if (item.get_agetype() == AgeCategory.SENIOR_MEMBER &&
+      } else if (item.getAgeCategory() == AgeCategory.SENIOR_MEMBER &&
           (item.get_activeOrInactive() == SubscriptionActivity.PASSIVE)) {
         item.setYearlyPrice(yearPrice.getPassivePrice());
       } else {
