@@ -4,5 +4,5 @@ public enum SwimmerRecord {
   BEST,
   FASTEST,
   LAST,
-  LONGEST,
+  LONGEST
 }

@@ -6,99 +6,72 @@ import dolphin.enums.AgeCategory;
 
 import java.util.List;
 
-// THIS IS THE FRONTDESK
-// SEE THIS AS THE PORTAL FOR ADMIN/CASHIER/ ETC....
 public class OverView {
-  // actual list to be use as dashboard for memberlist
-  public List<User> member_List;
-  // this is form helping setting prices
+  private List<User> memberList;
   private Prices yearPrice = new Prices();
-  private Members _data = new Members();
+  private Members data = new Members();
   private Integer timeInSeconds;
 
-
   public OverView() {
-    member_List = _data.Lst_of_Members;
+    memberList = data.listOfMembers;
     setSubscriptionType();
     setSubscriptionActivity();
     setYearlyPrices();
   }
 
-
-  public Integer getTimeinSeconds(){
-    return this.timeInSeconds;
-  }
-
-
-  // setting the activity level of each member from the dashboard
   private void setSubscriptionType() {
-    // helper for indexing the list of member
-    // so that we can set all even number as competitors
-    // and uneven number as simple motionist
+    // Even numbers for competitors, odd for normal Members
     Integer index = 0;
-
-
-    for (User item : member_List) {
-      //increment index
+    for (User user : memberList) {
       index++;
-
-      // tjek for even number
-      if (index % 2 == 0) {
-
-        item.set_subscriptionType(SubscriptionType.COMPETITOR);
-
-      } else {
-        item.set_subscriptionType(SubscriptionType.SWIMMER);
+      if (index % 2 == 0) {user.setSubscriptionType(SubscriptionType.COMPETITOR);
+      }
+      else {user.setSubscriptionType(SubscriptionType.SWIMMER);
       }
     }
   }
 
   private void setSubscriptionActivity() {
-    for (User item : member_List) {
-      // making all competitors as active members
+    for (User item : memberList) {
+      //All Competitors are active Members
       if (item.getSubscriptionType() == SubscriptionType.COMPETITOR) {
-        item.set_activeOrInactive(SubscriptionActivity.ACTIVE);
+        item.setActiveOrInactive(SubscriptionActivity.ACTIVE);
       }
-      // making all motionist that are either junior og senior - Active
-      else if (item.getSubscriptionType() == SubscriptionType.SWIMMER &&
+      // Set all swimmers that are either junior or senior to ActiveSubscription
+      else if
+      (item.getSubscriptionType() == SubscriptionType.SWIMMER &&
           (item.getAgeCategory() != AgeCategory.SENIOR_MEMBER)) {
-        item.set_activeOrInactive(SubscriptionActivity.ACTIVE);
+        item.setActiveOrInactive(SubscriptionActivity.ACTIVE);
       } else {
-        item.set_activeOrInactive(SubscriptionActivity.PASSIVE);
+        item.setActiveOrInactive(SubscriptionActivity.PASSIVE);
       }
     }
   }
 
-  // Price for member - Age category
+  // Price for member by Age category
   private void setYearlyPrices() {
-    for (User item : member_List) {
-      // case by age category
-      /*
-      switch (item._agetype){
-        case Senior_member -> item.Årspris = yearPrice.GetSenior_Price();
-        case Junior_member -> item.Årspris = yearPrice.getJunior_Price();
-        case Pensionist_member ->  item.Årspris = yearPrice.GetPensionist_Price();
-      }
-       */
+    for (User user : memberList) {
 
-      if (item.getAgeCategory() == AgeCategory.JUNIOR_MEMBER) {
-        item.setYearlyPrice(yearPrice.getJunior_Price());
-      } else if (item.getAgeCategory() == AgeCategory.ADULT_MEMBER) {
-        item.setYearlyPrice(yearPrice.getAdult_Price());
-      } else if (item.getAgeCategory() == AgeCategory.SENIOR_MEMBER &&
-          (item.get_activeOrInactive() == SubscriptionActivity.PASSIVE)) {
-        item.setYearlyPrice(yearPrice.getPassivePrice());
+      if (user.getAgeCategory() == AgeCategory.JUNIOR_MEMBER) {
+        user.setYearlyPrice(yearPrice.getJuniorPrice());
+      } else if (user.getAgeCategory() == AgeCategory.ADULT_MEMBER) {
+        user.setYearlyPrice(yearPrice.getAdultPrice());
+      } else if (user.getAgeCategory() == AgeCategory.SENIOR_MEMBER &&
+          (user.getActiveOrInactive() == SubscriptionActivity.PASSIVE)) {
+        user.setYearlyPrice(yearPrice.getPassivePrice());
       } else {
-        item.setYearlyPrice(yearPrice.getSenior_Price());
+        user.setYearlyPrice(yearPrice.getSeniorPrice());
       }
     }
   }
 
   public Double getYearlyBudget() {
     Double amount = 0.0;
-    for (User item : member_List) {
-      amount += item.getYearlyPrice();
-    }
+    for (User item : memberList) {
+      amount += item.getYearlyPrice();}
     return amount;
   }
+
+  public List<User> getMemberList() {return memberList;}
+  public Integer getTimeinSeconds(){return this.timeInSeconds;}
 }

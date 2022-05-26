@@ -6,4 +6,4 @@ public enum SwimmingStyle {
   BUTTERFLY,
   BREASTSTROKE,
   BACKSTROKE
-  }
+}

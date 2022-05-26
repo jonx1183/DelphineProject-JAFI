@@ -1,18 +1,14 @@
 package dolphin.Classer;
 
 import dolphin.Data.ListOfMembers;
-import dolphin.Data.OverView;
 
 import java.util.Scanner;
 
 public class UI {
   boolean onGoing = true;
-  //ConcurentSwimmer competition = new ConcurentSwimmer();
-  OverView members = new OverView();
-  Scanner scan = new Scanner(System.in);
+  Scanner in = new Scanner(System.in);
   ListOfMembers memberList = new ListOfMembers();
-  UserPerfomance record_by_competitor = new UserPerfomance();
-
+  UserPerfomance competitorRecords = new UserPerfomance();
 
   public void userinterface() {
     System.out.println("Welcome to the swimclub Dolphine");
@@ -24,17 +20,15 @@ public class UI {
         (5) - Admin Login:
         (6) - exit:
         """);
-
-    String userInput = scan.nextLine();
+    String userInput = in.nextLine();
     switch (userInput) {
       case "User", "1" -> System.out.println("test2");
       case "cashier", "2" -> cashier();
       case "Coach", "3" -> coach();
-      case "competition", "4" -> record_by_competitor.Top5_Printer(); //System.out.println("placeholder");
-      case "Admin", "Foreman", "5" -> foreman();
-      case "exit", "e", "6" -> {
-        System.exit(0);
-      }
+      case "Competitor", "4" -> memberList.showCompetitorsList();
+      case "Admin", "Foreman", "5" -> president();
+      case "exit", "e", "6" -> {System.exit(0);}
+
       default -> System.out.println("something went wrong!");
     }
   }
@@ -50,7 +44,7 @@ public class UI {
         (6) - exit:
         """);
 
-    String userInput = scan.nextLine();
+    String userInput = in.nextLine();
     while (onGoing) {
       switch (userInput) {
         case "Show payment options for members", "1" -> {
@@ -82,7 +76,7 @@ public class UI {
     }
   }
 
-  public void foreman() {
+  public void president() {
     System.out.println("What do you want to do?");
     System.out.println("""
         (1) - Adminstrate Members:
@@ -93,32 +87,32 @@ public class UI {
         (6) - Read Members from File:
         (7) - exit:
         """);
-    String userInput = scan.nextLine();
+    String userInput = in.nextLine();
     while (onGoing) {
       switch (userInput) {
         case "Administrate members", "1" -> {
           System.out.println("");
-          foreman();
+          president();
         } // placeholder
         case "Administrate swimming records", "2" -> {
           System.out.println("PlaceHolder");
-          foreman();
+          president();
         }
         case "records", "3" -> {
           memberList.showMembers();
-          foreman();
+          president();
         }
         case "show me the money", "4" -> {
           memberList.getBudget();
-          foreman();
+          president();
         }
         case "Write to File", "5" -> {
           memberList.writeToFile();
-          foreman();
+          president();
         }
         case "Read from File", "6" -> {
           memberList.readFromFile();
-          foreman();
+          president();
         }
         case "exit", "e", "7" -> userinterface();
         default -> {
@@ -130,24 +124,26 @@ public class UI {
   }
 
   public void coach() {
-    System.out.println("What do you want to do?");
     System.out.println("""
         (1) - Administrate tournament teams:
-        (2) - Adminstrate Members Performace:
-        (3) - exit:
+        (2) - Adminstrate Member Performace:
+        (3) - Top 5 Competitors:
+        (4) - Exit: 
         """);
-    String userInput = scan.nextLine();
+    String userInput = in.nextLine();
     while (onGoing) {
       switch (userInput) {
         case "Administrate tournament teams", "1" -> {
           System.out.println("");//placeholder
-          coach();
-        }
+          coach();}
         case "Administrate members performance", "2" -> {
-        memberList.showCompetitors();
-          coach();
+        memberList.showCompetitorsList();
+          coach();}
+        case "top 5", "3" -> {
+          competitorRecords.top5Printer();
+        coach();
         }
-        case "exit", "e", "3" -> userinterface();
+        case "exit", "e", "4" -> userinterface();
         default -> {
           System.err.println("something went wrong!");
           onGoing = false;

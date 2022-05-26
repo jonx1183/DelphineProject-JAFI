@@ -6,10 +6,9 @@ import dolphin.enums.SubscriptionType;
 import dolphin.enums.AgeCategory;
 
 public class User implements IPerson {
-
   private AgeCategory ageCategory;
-  private SubscriptionType _subscriptionType;
-  private SubscriptionActivity _activeOrInactive;
+  private SubscriptionType subscriptionType;
+  private SubscriptionActivity activeOrInactive;
   private Double yearlyPrice;
   private String fullName;
   private Integer age;
@@ -20,50 +19,6 @@ public class User implements IPerson {
     this.age = age;
     setAgeCategory();
   }
-
-  @Override
-  public String getFullName() {
-    return this.fullName;
-  }
-
-  public AgeCategory getAgeCategory() {
-    return ageCategory;
-  }
-
-  public void setAgeCategory(AgeCategory ageCategory) {
-    this.ageCategory = ageCategory;
-  }
-
-  public SubscriptionType getSubscriptionType(){
-    return this._subscriptionType;
-  }
-
-  public void set_subscriptionType(SubscriptionType _subscriptionType) {
-    this._subscriptionType = _subscriptionType;
-  }
-
-  public SubscriptionActivity get_activeOrInactive() {
-    return _activeOrInactive;
-  }
-
-  public void set_activeOrInactive(SubscriptionActivity _activeOrInactive) {
-    this._activeOrInactive = _activeOrInactive;
-  }
-
-  public Double getYearlyPrice() {
-    return yearlyPrice;
-  }
-
-  public void setYearlyPrice(Double yearlyPrice) {
-    this.yearlyPrice = yearlyPrice;
-  }
-
-  @Override
-  public Integer getAge() {
-    return this.age;
-  }
-
-
   private void setAgeCategory() {
     if (this.age < 18) {
       this.ageCategory = AgeCategory.JUNIOR_MEMBER;
@@ -73,24 +28,28 @@ public class User implements IPerson {
       this.ageCategory = AgeCategory.SENIOR_MEMBER;
     }
   }
-//public void set_subscriptionType(SubscriptionType level){
-  //  this._subscriptionType = level;
-//}
 
-
+  @Override
+  public String getFullName() {return this.fullName;}
+  public AgeCategory getAgeCategory() {return ageCategory;}
+  public void setAgeCategory(AgeCategory ageCategory) {this.ageCategory = ageCategory;}
+  public SubscriptionType getSubscriptionType(){return this.subscriptionType;}
+  public void setSubscriptionType(SubscriptionType subscriptionType) {this.subscriptionType = subscriptionType;}
+  public SubscriptionActivity getActiveOrInactive(){return activeOrInactive;}
+  public void setActiveOrInactive(SubscriptionActivity activeOrInactive) {this.activeOrInactive = activeOrInactive;}
+  public Double getYearlyPrice() {return yearlyPrice;}
+  public void setYearlyPrice(Double yearlyPrice) {this.yearlyPrice = yearlyPrice;}
+  @Override
+  public Integer getAge() {return this.age;}
 
   @Override
   public String toString() {
-    String fullinfo = "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this.ageCategory + " | " + "Activity Level :" + this._subscriptionType
-        + " | " + "Activity Form :" + this._activeOrInactive + " | " + "Year Price :" + this.yearlyPrice + "\n";
-
-    return fullinfo;
-  }
+    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this.ageCategory + " | " + "Activity Level :" + this.subscriptionType
+        + " | " + "Activity Form :" + this.activeOrInactive + " | " + "Year Price :" + this.yearlyPrice + "\n";}
 
 public String toString2(boolean x) {
-    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this.ageCategory + " | " + "Activity Level :" + this._subscriptionType
+    return "Name :" + this.fullName + " | " + "Age: " + this.age + " | " + "Age Category :" + this.ageCategory + " | " + "Activity Level :" + this.subscriptionType
         + " | " + "\n";
-
   }
 }
 
